@@ -7,8 +7,8 @@
  */
 function calculatorModule(x){
 // private
-var total = x;
-var memory;
+var total = 0;
+var memory = 0;
 
 
 
@@ -23,7 +23,15 @@ return{
     },
 
     getTotal: function(){
+      return total;
+    },
 
+    add: function(x){
+      return total += x;
+    },
+
+    subtract: function(){
+      return total -= x;
     }
 
 
