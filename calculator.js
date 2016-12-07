@@ -5,7 +5,32 @@
  * @variable PRIVATE { Number } `total`
  * @return {object} `calculator` object that can be used
  */
+function calculatorModule(x){
+// private
+var total = x;
+var memory;
 
+
+
+
+
+
+return{
+    load: function(x){
+      total = x;
+      return total;
+
+    },
+
+    getTotal: function(){
+
+    }
+
+
+
+
+};
+}
 
   /**
    * sets the `total` to the number passed in
