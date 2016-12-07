@@ -20,6 +20,11 @@ return{
       total = x;
       return total;
 
+
+     if(typeof x !=== number){
+      return "error";
+     }
+
     },
 
     getTotal: function(){
@@ -30,9 +35,31 @@ return{
       return total += x;
     },
 
-    subtract: function(){
+    subtract: function(x){
       return total -= x;
-    }
+    },
+
+    multiply: function(x){
+      return total *= x;
+    },
+
+    divide: function(x){
+      return total /= x;
+    },
+
+    recallMemory: function(){
+      return memory;
+    },
+
+    saveMemory: function(){
+      memory = total;
+    },
+
+    clearMemory: function(){
+      memory = 0;
+    },
+
+
 
 
 
