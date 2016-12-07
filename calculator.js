@@ -10,21 +10,23 @@ function calculatorModule(x){
 var total = 0;
 var memory = 0;
 
-
-
+var isValid = function(x){
+  if(typeof x === "number"){
+    return true;
+  }
+  else{
+    throw new Error("not a number");
+  }
+}
 
 
 
 return{
     load: function(x){
-      total = x;
-      return total;
-
-
-     if(typeof x !=== number){
-      return "error";
+      if(isValid(x)){
+        total = x;
+        return total;
      }
-
     },
 
     getTotal: function(){
@@ -32,19 +34,27 @@ return{
     },
 
     add: function(x){
-      return total += x;
+      if(isValid(x)){
+        return total += x;
+    }
     },
 
     subtract: function(x){
-      return total -= x;
+      if(isValid(x)){
+        return total -= x;
+    }
     },
 
     multiply: function(x){
-      return total *= x;
+      if(isValid(x)){
+        return total *= x;
+    }
     },
 
     divide: function(x){
-      return total /= x;
+      if(isValid(x)){
+        return total /= x;
+    }
     },
 
     recallMemory: function(){
@@ -58,12 +68,6 @@ return{
     clearMemory: function(){
       memory = 0;
     },
-
-
-
-
-
-
 };
 }
 
